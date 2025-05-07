@@ -12,6 +12,8 @@ Route::get('/', function () {
 Route::get('/pokemons', [PokemonController::class, 'index']);
 Route::get('/pokemons/create', [PokemonController::class, 'create']);
 Route::post('/pokemons/poster', [PokemonController::class, 'store']);
+Route::delete('/delete/{id}', [PokemonController::class, 'destroy']);
 
 Route::get('/students', [StudentController::class, 'index']);
 Route::post('/student/poster', [StudentController::class, 'store']);
+Route::delete('/delete/{id}', [StudentController::class, 'destroy']);

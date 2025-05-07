@@ -68,8 +68,10 @@ class PokemonController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Pokemon $pokemon)
+    public function destroy($id)
     {
-        //
+        $pokemon = Pokemon::find($id);
+        $pokemon->delete();
+        return redirect('/pokemons');
     }
 }
